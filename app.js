@@ -1,3 +1,11 @@
+/*
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World From NodeJs\n');
+}).listen(3001, "127.0.0.1");
+*/
+
 /**
 * Copyright 2014 IBM
 *
@@ -19,8 +27,9 @@ var PORT = 80;
 
 var app = express();
 app.get('/', function (req, res) {
-  res.send('Welcome to IBM Cloud DevOps with Docker, Kubernetes and Helm Charts. Lets go use the Continuous Delivery Service');
+  res.send('Nodejs Hello App one');
 });
 
 app.listen(PORT)
-console.log(' Application Running on port' + PORT);
+//console.log(' Application Running on port' + PORT);
+

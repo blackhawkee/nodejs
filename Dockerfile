@@ -13,15 +13,15 @@
 #   limitations under the License.
 
 FROM node:alpine
-MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
+MAINTAINER Premson
 
 RUN apk update && apk upgrade
 # Install the application
 ADD package.json /app/package.json
 RUN cd /app && npm install
 ADD app.js /app/app.js
-ENV WEB_PORT 80
-EXPOSE  80
+ENV WEB_PORT 3001
+EXPOSE  3001
 
 # Vulnerability Advisor : Fix PASS_MAX_DAYS, PASS_MIN_DAYS and PASS_MIN_LEN, common-password
 # RUN mv -f /etc/login.defs /etc/login.defs.orig
